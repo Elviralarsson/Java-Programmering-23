@@ -1,19 +1,21 @@
 
 package myExercises;
-import java.io.*;
-import java.util.*;
+
+import java.util.Scanner;
+
 public class myExercises{
     public static void main(String[] args){
-      
-      String stringInput = "My String Output";
-      
-      int iStrLength=stringInput.length();
-
-      while(iStrLength>0)
-      {
-        System.out.println(stringInput.charAt(iStrLength-1));
-        iStrLength--;
-
-      }
-}
+     
+	
+	String str;
+	char ch;
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter a string : ");
+	str=sc.nextLine();	
+	System.out.println("Reverse of a String '"+str+"' is  :"); 
+	for(int j=str.length();j>0;--j)
+	{
+	System.out.print(str.charAt(j-1)); 
+	}
+    }
 }
