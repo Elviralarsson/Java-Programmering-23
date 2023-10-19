@@ -2,9 +2,9 @@ package Lab1;
 
 import java.util.Scanner;
 
-public class Game {
-    
- public static void main(String[] args) {
+public class DiceGame {
+
+    public static void main(String[] args) {
         // Create a Scanner object to read user input.
         Scanner scanner = new Scanner(System.in);
 
@@ -22,7 +22,8 @@ public class Game {
 
         // Create a Player object with the specified player name and number of die sides.
         Player player = new Player(playerName, numbSides);
-int totalScore = 0;
+
+        int totalScore = 0;
 
         // Iterate through the specified number of rounds.
         for (int round = 1; round <= numbRounds; round++) {
@@ -32,8 +33,7 @@ int totalScore = 0;
 
             System.out.print("Make a guess:");
             int guess = scanner.nextInt();
-
-            if(guess == roundResult) {
+if(guess == roundResult) {
                 System.out.println("Congratulations, your guess is correct!");
                 System.out.println("Your multiplied result value is:" + guessroundResult);
              // Update the total score with the result of the current round.
@@ -49,7 +49,4 @@ int totalScore = 0;
         // Close the Scanner to release resources.
         scanner.close();
     }
-}
-
-
 }
