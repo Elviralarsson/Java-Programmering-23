@@ -20,7 +20,8 @@ public class DiceGame {
         System.out.print("Assign the number of sides on your die: ");
         int numbSides = scanner.nextInt();
 
-        // Create a Player object with the specified player name and number of die sides.
+        // Create a Player object with the specified player name and number of die
+        // sides.
         Player player = new Player(playerName, numbSides);
 
         int totalScore = 0;
@@ -29,15 +30,15 @@ public class DiceGame {
         for (int round = 1; round <= numbRounds; round++) {
             // Roll the player's die for the current round.
             player.rollDice();
-            int roundResult = player.getCurrentValue();
+            int roundResult = player.getCurrentValue(); //roundResult är värdet vi hämtarv efter vi rullat tärningen. När något är player. något är en funktion.Bara något man måste komma ihåg.
 
             System.out.print("Make a guess:");
             int guess = scanner.nextInt();
-if(guess == roundResult) {
+            if (guess == roundResult) {
                 System.out.println("Congratulations, your guess is correct!");
-                System.out.println("Your multiplied result value is:" + guessroundResult);
-             // Update the total score with the result of the current round.
-            totalScore += guessroundResult;
+                System.out.println("Your multiplied result value is:" + guess*roundResult);
+                // Update the total score with the result of the current round.
+                totalScore += guess*roundResult;
             }
             // Print the result of the current round.
             System.out.println("Round " + round + " Result: " + roundResult);
